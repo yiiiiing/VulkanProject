@@ -2,7 +2,7 @@
 This project is for learning Vulkan, the current goal is from rendering a simple triangle, making movement by passing MVP matrix in uniform buffuer, rendering an object, add texture to the object, adding keyboard input and UI and finnally making a simple interactive game.
 
 ### The progress
-[x] Basic steps to render a triangle
+- [x] Basic steps to render a triangle
 1. Create Vulkan instance and initialize a GLFW window to present the triangle.
 2. Create window surface, used for selecting a physical device which supports the triangle presenting.
 3. Select a physical device based on our required features, like sampler anisotropy. But some requirements must be satisfied, like device extensions must be supported by Vulkan and the queue family supported by the device must support presentation and VK_QUEUE_GRAPHICS_BIT.
@@ -14,11 +14,11 @@ This project is for learning Vulkan, the current goal is from rendering a simple
 9. In the Loop function, the program draws the frame, including getting the available image from the swap chain, updating the uniform buffer, submitting the command to graphics queue and at last, presenting the finished image. The execution order is ensured by the semaphores.
 10. When the user closes the window, destroying all the objects we created.
 
-[x] Create Base Application class and BaseObject class 
+- [x] Create Base Application class and BaseObject class 
 BaseApplication class is used for initializing Vulkan instance, device, window, render pass and drawing the frame, which are all the same to the different scene objects(models). While BaseObject class is Used for initializing vertex buffer, uniform buffer, descriptor sets, which are different for the objects.
-[x] Create BaseTexture class 
+- [x] Create BaseTexture class 
  Because differect objects can have same texture, so we don't need to add textures for each objects, so we can create new texture in BaseApplication class, and make the pointer `BaseTexture* texturePointer`  in BaseObject class refers to this texture.
  
-[x] Implement Phong lighting 
-[x] Add keyboard input
-[x] Add some UI, like texts, image, bar on the window
+- [ ] Implement Phong lighting 
+- [ ] Add keyboard input
+- [ ] Add some UI, like texts, image, bar on the window
